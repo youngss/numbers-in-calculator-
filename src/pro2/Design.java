@@ -93,7 +93,44 @@ public class Design  extends Application{
 	
 	st.show();
 
-
+	arr[1].setOnAction(e->{
+		text.setText(text.getText()+arr[1].getText());
+	});
+	    
+	arr[2].setOnAction(e->{
+		text.setText((text.getText()+arr[2].getText()));
+	});
+	
+    
+	arr[3].setOnAction(e->{
+		text.setText((text.getText()+arr[3].getText()));
+	});
+    
+	arr[4].setOnAction(e->{
+		text.setText((text.getText()+arr[4].getText()));
+	});
+    
+	arr[5].setOnAction(e->{
+		text.setText((text.getText()+arr[5].getText()));
+	});
+    
+	arr[6].setOnAction(e->{
+		text.setText((text.getText()+arr[6].getText()));
+	});
+    
+	arr[7].setOnAction(e->{
+		text.setText((text.getText()+arr[7].getText()));
+	});
+    
+	arr[8].setOnAction(e->{
+		text.setText((text.getText()+arr[8].getText()));
+	});
+    
+	arr[9].setOnAction(e->{
+		text.setText((text.getText()+arr[9].getText()));
+		
+		});
+		
 
 
 
