@@ -27,7 +27,7 @@ public class Design  extends Application{
 	public void start(Stage st) throws Exception {
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		//Ïå æÍÏæ ÚÔÇä ÍÌãå ÎÏ 6 ÇÚãÏå æÕÝíä 
+		 
 	
 	text.setPrefHeight(70);
 	text.setPrefWidth(300);
@@ -67,14 +67,14 @@ public class Design  extends Application{
 		    	 
 		     }
 		     arr2[0].setText("/");
-		     arr2[1].setGraphic(new ImageView("2.png"));        //åäÇ Ýí ÕÒÑå 
+		     arr2[1].setGraphic(new ImageView("2.png"));        
 		     arr2[2].setGraphic(new ImageView("3.png"));       
 		     arr2[3].setText("*");
 		     arr2[4].setText("(");
 		     arr2[5].setText(")");
 		     arr2[6].setText("-");
-		     arr2[7].setGraphic(new ImageView(new Image(getClass().getResourceAsStream("1.png"))));       //åäÇ Ýí ÕæÑå
-		     arr2[8].setText("Sqrt");           //åäÇ Ýí ÕæÑå
+		     arr2[7].setGraphic(new ImageView(new Image(getClass().getResourceAsStream("1.png"))));       
+		     arr2[8].setText("Sqrt");         
 ///////////////////////////////////////////////////////////////////////////////////////////////////		     
 	 
 		     String [] str = {"0",".", "%" ,"+"};
@@ -131,7 +131,80 @@ public class Design  extends Application{
 		
 		});
 		
+	arr2[0].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[0].getText()+" "));
+	
+	});
 
+	arr2[1].setOnAction(e->{
+		String remind= text.getText();
+		
+		      if(Character.isDigit(remind.charAt(remind.length()-1)))
+				text.setText(remind.substring(0, remind.length()-1));
+		      
+		      else
+		    	  text.setText(remind.substring(0, remind.length()-3));  
+	
+	});		
+	arr2[2].setOnAction(e->{
+		text.setText("");
+	
+	});
+
+	arr2[3].setOnAction(e->{
+		text.setText((text.getText()+" "+arr2[3].getText()+" "));
+	
+	});
+
+	arr2[4].setOnAction(e->{
+		text.setText((text.getText()+arr2[4].getText())+" ");
+	
+	});
+
+	arr2[5].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[5].getText()));
+	
+	});
+
+	arr2[6].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[6].getText()+" "));
+	
+	});
+
+	arr2[7].setOnAction(e->{
+		text.setText((text.getText()+" " +"^ 2"));
+	
+	});
+
+	arr2[8].setOnAction(e->{
+		text.setText((text.getText()+" " +arr2[8].getText()+" "));
+	
+	});
+	
+	
+	last_row[0].setOnAction(e->{
+		text.setText((text.getText()+last_row[0].getText()));
+	
+	});
+	
+	
+	last_row[1].setOnAction(e->{
+		text.setText((text.getText()+" " +last_row[1].getText()));
+		
+	
+	});
+	
+
+	last_row[2].setOnAction(e->{
+		text.setText((text.getText()+" " +last_row[2].getText()+" "));
+	
+	});
+	
+	
+	last_row[3].setOnAction(e->{
+		text.setText((text.getText()+" "+last_row[3].getText()+" "));
+	
+	});
 
 
    }
